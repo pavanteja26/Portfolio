@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavan Teja Reddy - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: white;
+            color: whitesmoke;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Left Side: Scrollable Content */
+        .content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            margin-right: 320px; /* Leaves space for the fixed profile section */
+        }
+
+        /* Right Side: Fixed Profile Section */
+        .profile-container {
+            width: 300px;
+            background: rgba(13, 13, 13, 0.9);
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Profile Picture */
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            margin-right: auto;
+            position: fixed;
+            width: calc(100% - 300px); /* Adjusted width */
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar a {
+            color: #f6eb8d;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ff6f61;
+        }
+
+        /* Sections */
+        .section, .section1 {
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            margin: 40px auto;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .section p, .section li {
+            line-height: 25px;
+        }
+
+        /* Project Cards */
+        .card, .card1 {
+            background: linear-gradient(135deg, orange, rgb(232, 71, 71));
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px auto;
+            width: 80%;
+            color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .card1 {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card1 img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        /* Button */
+        .btn {
+            background: #ff6f61;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff3b2f;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .profile-container {
+                position: static;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+            }
+            .content {
+                margin-right: 0;
+            }
+            .navbar {
+                width: 100%;
+            }
+        }
+
+        /* Style for Contact Section */
+        #contact p {
+            color: whitesmoke;
+            font-size: 18px;
+        }
+
+        #contact a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        #contact a:hover {
+            color: #ff6f61;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left side content -->
+        <div class="content">
+            <nav class="navbar">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>                
+                <a href="#certificates">Certificates</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <div class="card">
+                    <p>Passionate Data Science student eager to innovate and learn, and to explore the world of data-driven solutions. My interests lie in Cloud Computing and Machine Learning. I enjoy solving real-world problems using technology and continuously learning new skills to enhance my expertise.</p>
+                </div>
+            </section>
+            
+            <section id="skills" class="section">
+                <h2>Skills</h2>
+                <div class="card">
+                    <p><b>Programming:</b> C, Python, Java</p>
+                    <p><b>Tech Stack:</b> HTML, CSS, JavaScript, GitHub</p>
+                </div>
+            </section>
+
+            <section id="certificates" class="section">
+                <h2>Certificates</h2>
+                <div class="card">
+                    <ul> 
+                        <li>Cyber Job Simulation</li>
+                        <li>Data Analytics Job Simulation</li>
+                        <li>Technology Job Simulation</li>
+                        <li>Python for Data Science from Great Learning</li>
+                        <li>Machine Learning using Python from Simplilearn</li>
+                        <li>AI Tool Workshop by Be10X</li>
+                    </ul>  
+                </div>
+            </section>
+            
+            <section id="projects" class="section1">
+                <h2>Projects</h2>
+                <div class="card1">
+                    <img src="Loan Approval Vector Concept Color Illustration.jpeg" alt="Loan Prediction">
+                    <p><b>Loan Prediction</b> - Using ML for loan approvals.</p>
+                </div>
+                <div class="card1">
+                    <img src="I will create advanced power bi dashboards, and reports.jpeg" alt="Power BI">
+                    <p><b>Power BI Visualization</b> - Data insights and analysis.</p>
+                </div>
+            </section>
+            
+            <section id="contact" class="section">
+                <h2>Contact</h2>
+                <div class="card">
+                    <p>Email: <a href="mailto:pavan.kanikireddy@sasi.ac.in">pavan.kanikireddy@sasi.ac.in</a></p>
+                    <p>Phone: +91 9398258650</p>
+                    <p>
+                        <a href="https://github.com/pavanteja26">GitHub</a> |
+                        <a href="https://www.linkedin.com/in/pavan-teja-reddy-270b29246/">LinkedIn</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="profile-container">
+            <img src="profile photo.jpg" alt="Pavan Teja Reddy" class="profile-pic">
+    <h1>Pavan Teja Reddy</h1>
+    <p>B.Tech - Computer Science & Engineering (Data Science)</p>
+
+    <!-- Direct Download Link -->
+    <a href="Resume 1.pdf" download="PavanTejaReddy_Resume.pdf">
+        
+    </a>
+
+    <!-- JavaScript Download Button -->
+    <button class="btn" onclick="downloadResume()" >Download Resume</button>
+</div>
+
+<script>
+    function downloadResume() {
+        let resumeLink = document.createElement("a");
+        resumeLink.href = "Resume 1.pdf";  // Ensure the file path is correct
+        resumeLink.download = "Pavan Teja Resume.pdf"; // File name after download
+        document.body.appendChild(resumeLink);
+        resumeLink.click();
+        document.body.removeChild(resumeLink);
+    }
+</script>
+
+    </div>
+</body>
+</html>
