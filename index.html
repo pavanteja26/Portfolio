@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavan Teja Reddy - Portfolio</title>
     <style>
-        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             background: white;
@@ -17,22 +16,19 @@
             overflow: hidden;
         }
 
-        /* Main Container */
         .container {
             display: flex;
             width: 100%;
             height: 100vh;
         }
 
-        /* Left Side: Scrollable Content */
         .content {
             flex-grow: 1;
             overflow-y: auto;
             padding: 20px;
-            margin-right: 320px; /* Leaves space for the fixed profile section */
+            margin-right: 320px;
         }
 
-        /* Right Side: Fixed Profile Section */
         .profile-container {
             width: 300px;
             background: rgba(13, 13, 13, 0.9);
@@ -48,7 +44,6 @@
             justify-content: center;
         }
 
-        /* Profile Picture */
         .profile-pic {
             width: 180px;
             height: 180px;
@@ -57,7 +52,6 @@
             border: 4px solid white;
         }
 
-        /* Navbar */
         .navbar {
             display: flex;
             justify-content: center;
@@ -65,7 +59,7 @@
             padding: 10px;
             margin-right: auto;
             position: fixed;
-            width: calc(100% - 300px); /* Adjusted width */
+            width: calc(100% - 300px); 
             top: 0;
             left: 0;
             z-index: 1000;
@@ -85,7 +79,6 @@
             color: #ff6f61;
         }
 
-        /* Sections */
         .section, .section1 {
             padding: 80px 20px;
             background: rgba(0, 0, 0, 0.6);
@@ -99,7 +92,6 @@
             line-height: 25px;
         }
 
-        /* Project Cards */
         .card, .card1 {
             background: linear-gradient(135deg, orange, rgb(232, 71, 71));
             padding: 25px;
@@ -123,7 +115,6 @@
             margin-right: 15px;
         }
 
-        /* Button */
         .btn {
             background: #ff6f61;
             color: white;
@@ -139,7 +130,6 @@
             background: #ff3b2f;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -158,7 +148,6 @@
             }
         }
 
-        /* Style for Contact Section */
         #contact p {
             color: whitesmoke;
             font-size: 18px;
@@ -251,20 +240,18 @@
     <h1>Pavan Teja Reddy</h1>
     <p>B.Tech - Computer Science & Engineering (Data Science)</p>
 
-    <!-- Direct Download Link -->
     <a href="Resume 1.pdf" download="PavanTejaReddy_Resume.pdf">
         
     </a>
 
-    <!-- JavaScript Download Button -->
     <button class="btn" onclick="downloadResume()" >Download Resume</button>
 </div>
 
 <script>
     function downloadResume() {
         let resumeLink = document.createElement("a");
-        resumeLink.href = "Resume 1.pdf";  // Ensure the file path is correct
-        resumeLink.download = "Pavan Teja Resume.pdf"; // File name after download
+        resumeLink.href = "Resume 1.pdf";  
+        resumeLink.download = "Pavan Teja Resume.pdf";
         document.body.appendChild(resumeLink);
         resumeLink.click();
         document.body.removeChild(resumeLink);
